@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        marquee {
+            font-size: smaller;
+            display: block;
+            margin-top: 2px;
+            font-family: 'Gill Sans', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            color: transparent;
+        }
+
+        input,
+        textarea,
+        button,
+        select {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+
+        }
+
+        @font-face {
+            font-family: 'regm';
+            src: url(/static/regmedi.otf);
+        }
+
+        @font-face {
+            font-family: 'reg';
+            src: url(/static/regular.otf);
+        }
+
+        @font-face {
+            font-family: 'metrol';
+            src: url(/static/metrolight.otf);
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav h1 {
+            color: rgb(0, 0, 0);
+            font-family: regm;
+            letter-spacing: 3px;
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        /* -------------------p */
+
+        /* -------------f */
+        footer {
+            width: 100vw;
+            height: 3em;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer img {
+            height: 1.4em;
+        }
+
+        #userdp {
+            outline: 2px solid white;
+            border-radius: 50%;
+        }
+
+        /* -------------------- */
+        .postcontainer {
+            padding: 0.5em 0;
+            width: 100vw;
+            display: flex;
+        }
+
+        .postleft {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5em;
+        }
+
+        .postdp {
+            height: 2em;
+        }
+
+
+
+        .postline {
+            height: 90%;
+            width: 0.095em;
+            min-height: 1em;
+            background-color: black;
+        }
+
+        .postcommentdp {
+            height: 1em;
+        }
+
+        /* ---------------- */
+        .postright {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5em 0 0.4em 0;
+        }
+
+        .posttext {
+            margin-top: 0.7em;
+            font-size: small;
+            font-family: regm;
+            white-space: wrap;
+        }
+
+        .posttext p {
+            margin-top: 0.4em;
+            margin-right: 1em;
+            white-space: wrap;
+        }
+
+        .postcon {
+            width: 85vw;
+            margin: 1em 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: start;
+            overflow: hidden;
+            overflow-x: scroll;
+            gap: 0.5em;
+        }
+
+        .post {
+            max-height: 10em;
+            min-height: 10em;
+        }
+
+        .postreacts {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+
+        .postreacts p {
+            font-size: x-small;
+            font-family: metrol;
+            font-weight: 600;
+            color: #5c5c5c;
+        }
+
+        .postreacts img {
+            height: 1em;
+        }
+
+        /* ----------end */
+        .end {
+            padding: 2em 0 6em 0;
+            display: grid;
+            place-items: center;
+            font-family: reg;
+            font-weight: bolder;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Styled</h1>
+    </nav>
+    <main>
+        <!-- -post start -->
+        <div class="postcontainer">
+            <div class="postleft">
+                <img class="postdp" src="/static/user.svg">
+                <span class="postline"></span>
+                <img class="postcommentdp" src="/static/user.svg">
+            </div>
+            <div class="postright">
+                <div class="posttext">
+                    <h4 id="postusername">User Name</h4>
+                    <p>Captions on their posts Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                        eius!</p>
+                </div>
+                <div class="postcon">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                </div>
+                <div class="postreacts">
+                    <p>10+ more reacts</p>
+                    <img src="/static/like.svg" alt="">
+                    <img src="/static/comment.svg" alt="">
+                    <img src="/static/mess.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- post end -->
+        <div class="postcontainer">
+            <div class="postleft">
+                <img class="postdp" src="/static/user.svg">
+                <span class="postline"></span>
+                <img class="postcommentdp" src="/static/user.svg">
+            </div>
+            <div class="postright">
+                <div class="posttext">
+                    <h4 id="postusername">User Name</h4>
+                    <p>Captions on their posts Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                        eius!</p>
+                </div>
+                <div class="postcon">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                </div>
+                <div class="postreacts">
+                    <p>10+ more reacts</p>
+                    <img src="/static/like.svg" alt="">
+                    <img src="/static/comment.svg" alt="">
+                    <img src="/static/mess.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="postcontainer">
+            <div class="postleft">
+                <img class="postdp" src="/static/user.svg">
+                <span class="postline"></span>
+                <img class="postcommentdp" src="/static/user.svg">
+            </div>
+            <div class="postright">
+                <div class="posttext">
+                    <h4 id="postusername">User Name</h4>
+                    <p>Captions on their posts Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                        eius!</p>
+                </div>
+                <div class="postcon">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                    <img src="/static/post.svg" alt="" class="post">
+                </div>
+                <div class="postreacts">
+                    <p>10+ more reacts</p>
+                    <img src="/static/like.svg" alt="">
+                    <img src="/static/comment.svg" alt="">
+                    <img src="/static/mess.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <p>You Have Nothing To See : )</p>
+        </div>
+    </main>
+    <footer>
+        <a href=""><img src="/static/home.svg" alt=""></a>
+        <a href=""><img src="/static/search.svg" alt=""></a>
+        <a href=""><img src="/static/add.svg" alt=""></a>
+        <a href=""><img src="/static/message.svg" alt=""></a>
+        <a href=""><img id="userdp" src="/static/user.svg" alt=""></a>
+    </footer>
+</body>
+
+</html>
